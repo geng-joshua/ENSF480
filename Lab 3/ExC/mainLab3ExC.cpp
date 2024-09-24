@@ -51,7 +51,7 @@ void print(LookupTable<T, K>& lt)
 }
 
 template <class T, class K>
-void try_to_find(LookupTable<T, K>& lt, K key)
+void try_to_find(LookupTable<T, K>& lt, T key)
 {
   lt.find(key);
   if (lt.cursor_ok())
@@ -60,20 +60,19 @@ void try_to_find(LookupTable<T, K>& lt, K key)
     cout << "\nSorry, I couldn't find key: " << key << " in the table.\n";
 }
 
-template <class T, class K>
 void test_Customer()
   //creating a lookup table for customer objects.
   {
     cout<<"\nCreating and testing Customers Lookup Table <not template>-...\n";
-    LookupTable<T, K> lt;
+    LookupTable<int, Customer> lt;
     
     // Insert using new keys.
     Customer a("Joe", "Morrison", "11 St. Calgary.", "(403)-1111-123333");
     Customer b("Jack", "Lewis", "12 St. Calgary.", "(403)-1111-123334");
     Customer c("Tim", "Hardy", "13 St. Calgary.", "(403)-1111-123335");
-    lt.insert(Pair<T, K> (8002, a));
-    lt.insert(Pair<T, K> (8004,c));
-    lt.insert(Pair<T, K> (8001,b));
+    lt.insert(Pair<int, Customer> (8002, a));
+    lt.insert(Pair<int, Customer> (8004,c));
+    lt.insert(Pair<int, Customer> (8001,b));
  
     assert(lt.size() == 3);
     lt.remove(8004);
@@ -89,7 +88,7 @@ void test_Customer()
 
     // test Iterator
     cout << "\nTesing and using  iterator ...\n";
-    typename LookupTable<T, K>::Iterator it = lt.begin();
+    typename LookupTable<int, Customer>::Iterator it = lt.begin();
     cout <<"\nThe first node contains: " <<*it <<endl;
 
     while (!it) {
@@ -99,7 +98,7 @@ void test_Customer()
     //test copying
     lt.go_to_first();
     lt.step_fwd();
-    LookupTable<T, K> clt(lt);
+    LookupTable<int, Customer> clt(lt);
     assert(strcmp(clt.cursor_datum().getFname(),"Joe")==0);
 
     cout << "\nTest copying: keys should be 8001, and 8002\n";
