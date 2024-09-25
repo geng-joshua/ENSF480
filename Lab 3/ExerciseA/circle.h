@@ -1,3 +1,11 @@
+/*
+* File Name: circle.h
+* Assignment: Lab 3 Exercise A
+* Lab Section: B01
+* Completed by: Chloe Choi, Joshua Geng
+* Submission Date: Sept 27, 2024
+*/
+
 #include "shape.h"
 using namespace std;
 #ifndef circle_h

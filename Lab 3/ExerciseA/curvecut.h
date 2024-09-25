@@ -1,3 +1,11 @@
+/*
+* File Name: curvecut.h
+* Assignment: Lab 3 Exercise A
+* Lab Section: B01
+* Completed by: Chloe Choi, Joshua Geng
+* Submission Date: Sept 27, 2024
+*/
+
 #include "circle.h"
 #include "rectangle.h"
 #ifndef curvecut_h

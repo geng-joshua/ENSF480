@@ -1,9 +1,9 @@
 /*
 * File Name: graphicsWorld.h
-* Assignment: Lab 2 Exercise B
+* Assignment: Lab 3 Exercise A
 * Lab Section: B01
 * Completed by: Chloe Choi, Joshua Geng
-* Submission Date: Sept 20, 2024
+* Submission Date: Sept 27, 2024
 */
 
 #ifndef graphicsWorld_h
