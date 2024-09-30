@@ -18,6 +18,10 @@ class Vehicle {
     string name;
 
     public:
+    void forward();
+    void backward();
+    void enlarge(int n);
+    void shrink(int n);
     Vehicle(string name);
     void move();
 };
